@@ -10,5 +10,5 @@ class Quote extends Model
     protected $collection = 'quotes';
     */
 
-    protected $fillable = ['content'];
+    protected $fillable = ['content','author'];
 }

@@ -18,6 +18,7 @@ class QuoteController extends Controller
     {
         $quote = new Quote();
         $quote->content = $request->input('content');
+        $quote->author = $request->input('author');
         $quote->save();
         return response()->json(['quote' => $quote], 201);
     }
@@ -39,6 +40,7 @@ class QuoteController extends Controller
             return response()->json(['message' => 'Document not found'], 404);
         }
         $quote->content = $request->input('content');
+        $quote->author = $request->input('author');
         $quote->save();
         return response()->json(['quote' => $quote], 200);
     }
